@@ -1,0 +1,54 @@
+<sly data-sly-use.model="com.bhasaka.codenexus.core.models.ProductCardModel"></sly>
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
+<sly data-sly-set.hasContent="${model.productTitle}"></sly>
+<sly data-sly-test="${model.productDescription}" data-sly-set.hasContent="true"></sly>
+<sly data-sly-test="${model.productImage}" data-sly-set.hasContent="true"></sly>
+<sly data-sly-test="${model.productPrice}" data-sly-set.hasContent="true"></sly>
+<sly data-sly-test="${model.ctaText}" data-sly-set.hasContent="true"></sly>
+<sly data-sly-test="${model.offers.size > 0}" data-sly-set.hasContent="true"></sly>
+
+<div class="cmp-productcard" data-sly-test="${hasContent}">
+    <div class="cmp-productcard__media" data-sly-test="${model.productImage}">
+        <img class="cmp-productcard__image"
+             src="${model.productImage}"
+             alt="${model.productImageAlt}"/>
+        <span class="cmp-productcard__badge" data-sly-test="${model.badgeText}">
+            ${model.badgeText}
+        </span>
+    </div>
+
+    <div class="cmp-productcard__body">
+        <h3 class="cmp-productcard__title" data-sly-test="${model.productTitle}">${model.productTitle}</h3>
+
+        <p class="cmp-productcard__description" data-sly-test="${model.productDescription}">
+            ${model.productDescription}
+        </p>
+
+        <ul class="cmp-productcard__offers" data-sly-list.offer="${model.offers}">
+            <li class="cmp-productcard__offer" data-sly-test="${offer.text}">
+                <span class="cmp-productcard__offer-icon" data-sly-test="${offer.icon}">${offer.icon}</span>
+                <span class="cmp-productcard__offer-text">${offer.text}</span>
+            </li>
+        </ul>
+
+        <div class="cmp-productcard__price-row" data-sly-test="${model.productPrice}">
+            <span class="cmp-productcard__price">
+                ${model.productCurrency} ${model.productPrice}
+            </span>
+            <span class="cmp-productcard__stock cmp-productcard__stock--out" data-sly-test="${model.outOfStock}">
+                Out of stock
+            </span>
+        </div>
+
+        <a class="cmp-productcard__cta"
+           data-sly-test="${model.ctaText}"
+           href="${model.ctaLink ? model.ctaLink : '#'}"
+           target="${model.openInNewTab ? '_blank' : '_self'}"
+           rel="${model.openInNewTab ? 'noopener noreferrer' : 'nofollow'}">
+            ${model.ctaText}
+        </a>
+    </div>
+</div>
+
+<sly data-sly-test="${!hasContent}"
+     data-sly-call="${templates.placeholder @ isEmpty=true}"></sly>

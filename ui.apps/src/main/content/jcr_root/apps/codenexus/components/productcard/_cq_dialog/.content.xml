@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Product Card"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <product
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Product Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <productTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Product Title"
+                                                name="./productTitle"
+                                                required="{Boolean}true"/>
+                                            <productDescription
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldLabel="Product Description"
+                                                name="./productDescription"
+                                                rows="{Long}4"/>
+                                            <productImage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Product Image"
+                                                name="./productImage"
+                                                rootPath="/content/dam"/>
+                                            <productImageAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Image Alt Text"
+                                                name="./productImageAlt"/>
+                                            <productPrice
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldLabel="Price"
+                                                min="{Double}0"
+                                                name="./productPrice"
+                                                step="0.01"/>
+                                            <productCurrency
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Currency"
+                                                name="./productCurrency">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <inr
+                                                        jcr:primaryType="nt:unstructured"
+                                                        selected="{Boolean}true"
+                                                        text="INR"
+                                                        value="INR"/>
+                                                    <usd
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="USD"
+                                                        value="USD"/>
+                                                    <eur
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="EUR"
+                                                        value="EUR"/>
+                                                </items>
+                                            </productCurrency>
+                                            <badgeText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Example: New, Sale, Limited"
+                                                fieldLabel="Badge Text"
+                                                name="./badgeText"/>
+                                            <offers
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Add offer icon and text rows."
+                                                fieldLabel="Offers">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./offers">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <icon
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Use small unicode icon like ✓ or ★, or short text icon."
+                                                            fieldLabel="Offer Icon"
+                                                            name="./icon"/>
+                                                        <text
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Offer Text"
+                                                            name="./text"/>
+                                                    </items>
+                                                </field>
+                                            </offers>
+                                            <outOfStock
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checkedValue="{Boolean}true"
+                                                name="./outOfStock"
+                                                text="Mark as Out of Stock"
+                                                uncheckedValue="{Boolean}false"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </product>
+                    <cta
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="CTA"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <ctaText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="CTA Text"
+                                                name="./ctaText"/>
+                                            <ctaLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="CTA Link"
+                                                name="./ctaLink"
+                                                rootPath="/content"/>
+                                            <openInNewTab
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checkedValue="{Boolean}true"
+                                                name="./openInNewTab"
+                                                text="Open CTA in new tab"
+                                                uncheckedValue="{Boolean}false"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </cta>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

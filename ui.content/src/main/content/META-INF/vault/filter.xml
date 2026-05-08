@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/codenexus" mode="merge"/>
+    <filter root="/content/codenexus" mode="merge"/>
+    <filter root="/content/dam/codenexus" mode="merge">
+        <exclude pattern="/content/dam/codenexus(/.*)?"/>
+        <include pattern="/content/dam/codenexus/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/codenexus/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/codenexus" mode="merge"/>
+</workspaceFilter>

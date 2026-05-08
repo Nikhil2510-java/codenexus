@@ -1,0 +1,106 @@
+.cmp-productcard {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 340px;
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.cmp-productcard__media {
+  position: relative;
+}
+
+.cmp-productcard__image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.cmp-productcard__badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #0b5fff;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.cmp-productcard__body {
+  padding: 16px;
+}
+
+.cmp-productcard__title {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.cmp-productcard__description {
+  margin: 0 0 14px;
+  color: #4f4f4f;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cmp-productcard__offers {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.cmp-productcard__offer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  color: #555;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.cmp-productcard__offer-icon {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.cmp-productcard__offer-text {
+  font-size: 12px;
+}
+
+.cmp-productcard__price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.cmp-productcard__price {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cmp-productcard__stock--out {
+  color: #d22;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cmp-productcard__cta {
+  display: inline-block;
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cmp-productcard__cta:hover {
+  background: #2c2c2c;
+}
