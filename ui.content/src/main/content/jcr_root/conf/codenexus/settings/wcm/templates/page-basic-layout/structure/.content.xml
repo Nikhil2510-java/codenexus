@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[mobile/groups/responsive]"
+        cq:template="/conf/codenexus/settings/wcm/templates/page-basic-layout"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="codenexus/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="codenexus/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="codenexus/components/header"
+                homeLink="/content/codenexus/us/en"
+                logoAltText="CodeNexus logo"
+                logoPath="/content/dam/codenexus/logo.png"
+                navLabel1="Home"
+                navLabel2="Products"
+                navLabel3="Contact"
+                navUrl1="/content/codenexus/us/en"
+                navUrl2="/content/codenexus/us/en/products"
+                navUrl3="/content/codenexus/us/en/contact"
+                projectTitle="CodeNexus"/>
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="codenexus/components/container"
+                editable="{Boolean}true"
+                layout="responsiveGrid"/>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="codenexus/components/footer"
+                contactAddress="CodeNexus HQ, Bengaluru, India"
+                contactEmail="support@codenexus.com"
+                contactTitle="Contact Details"
+                linkLabel1="About Us"
+                linkLabel2="Services"
+                linkLabel3="Contact"
+                linkUrl1="/content/codenexus/us/en/about"
+                linkUrl2="/content/codenexus/us/en/services"
+                linkUrl3="/content/codenexus/us/en/contact"/>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}768"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

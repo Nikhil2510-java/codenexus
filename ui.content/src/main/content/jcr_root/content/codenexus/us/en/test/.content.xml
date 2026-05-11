@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-05-08T18:03:33.638+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/codenexus/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Test"
+        sling:resourceType="codenexus/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="codenexus/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="codenexus/components/container"
+                layout="responsiveGrid">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="codenexus/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="codenexus/components/container"
+                    layout="responsiveGrid">
+                    <producttest
+                        jcr:created="{Date}2026-05-06T11:29:36.904+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-05-06T11:29:49.267+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="codenexus/components/productTest"
+                        productTitle="Name"/>
+                    <productcard
+                        jcr:created="{Date}2026-05-08T17:15:43.397+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-05-08T18:03:33.622+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="codenexus/components/productcard"
+                        badgeText="test badge"
+                        ctaText="See more next"
+                        openInNewTab="false"
+                        outOfStock="false"
+                        productCurrency="INR"
+                        productDescription="Laptap description"
+                        productImage="/content/dam/codenexus/top-view-virtual-reality-simulator-with-headphones.jpg"
+                        productImageAlt="test"
+                        productPrice="199999"
+                        productTitle="laptop">
+                        <offers jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                icon="start"
+                                text="10%"/>
+                        </offers>
+                    </productcard>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>
