@@ -1,0 +1,6 @@
+{
+  "scripts":[
+    "create service user allserviceuser",
+    "set ACL for allserviceuser\r\n\tallow jcr:all on /content/codenexus\r\n\tallow jcr:all on /var\r\n\tallow jcr:read on /\r\nend\r\n"
+  ]
+}
