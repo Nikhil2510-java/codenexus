@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "skills": {
+    "ensure-agents-md": {
+      "source": "adobe/skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "plugins/aem/cloud-service/skills/ensure-agents-md/SKILL.md",
+      "computedHash": "cb2afb1f2101bb31f1e1ae23877703985c49bb3c14108d63ea89b154134c315c"
+    }
+  }
+}
